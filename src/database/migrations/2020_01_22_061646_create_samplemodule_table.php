@@ -15,8 +15,14 @@ class CreateSamplemoduleTable extends Migration
     {
         Schema::create('samplemodules', function (Blueprint $table) {
             $table->bigIncrements('id');
-            $table->string('title', 120);
-            $table->text('content');
+            $table->text('slug');
+            $table->text('url');
+            $table->text('name');
+            $table->text('title');
+            $table->text('description');
+            $table->text('keywords');
+            $table->mediumInteger('order');
+            $table->tinyInteger('status');
             $table->timestamps();
             $table->softDeletes();
         });

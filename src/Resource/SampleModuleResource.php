@@ -3,6 +3,7 @@
 namespace Quill\SampleModule\Resource;
 
 use Quill\Html\Fields\ID;
+use Quill\Html\Fields\Select;
 use Quill\Html\Fields\Text;
 use Quill\Html\Fields\Textarea;
 use Quill\SampleModule\Models\SampleModule;
@@ -14,10 +15,14 @@ class SampleModuleResource extends SampleModule implements Formable
     {
         return [
             ID::make()->sortable()->searchable(),
-
-            Text::make('title')->sortable(),
-
-            Textarea::make('content')->searchable()->help('this is info')->hideFromIndex(),
+            Text::make('slug')->sortable(),
+            Text::make('url')->sortable(),
+            Text::make('name')->sortable(),
+            Text::make('Meta Title', 'title')->sortable()->hideFromIndex(),
+            Text::make('Meta Description', 'description')->sortable()->hideFromIndex(),
+            Text::make('Meta Keywords', 'keywords')->sortable()->hideFromIndex(),
+            Text::make('order')->sortable(),
+            Text::make('status')->sortable(),
         ];
     }
 
