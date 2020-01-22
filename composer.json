@@ -1,0 +1,26 @@
+{
+    "name": "quill/samplemodule",
+    "description": "Sample module",
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Mikko",
+            "email": "MiguelAndreiRafael.Penuela@Pep.ph"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {},
+    "autoload": {
+        "psr-4": {
+            "Quill\\SampleModule\\": "src/"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Quill\\SampleModule\\SampleModuleServiceProvider"
+            ]
+        }
+    }
+}
